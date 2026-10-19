@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: kenwood-spectrum-deck
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /
+    envVars:
+      - key: AUDD_API_TOKEN
+        sync: false
